@@ -1,0 +1,18 @@
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01> gcc -g -O0 problem01.c -o problem01.exe
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01> gdb .\problem01.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01\problem01.exe...done.
+(gdb) r
+Starting program: C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01/.\problem01.exe
+[New Thread 8200.0x4108]
+[New Thread 8200.0x3884]
+P akhilesh[Inferior 1 (process 8200) exited normally]
+(gdb) quit
