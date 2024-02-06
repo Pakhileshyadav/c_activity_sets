@@ -1,0 +1,11 @@
+# indicates line which should be processed by preprocssor
+the prepocessor which converts a source code before compliation
+compiler supports the source programming language , which reads the files
+gcc is complier for c language that converts c source file to executable
+preprocesssor of gcc will process lines sttarting with 
+what is # include <stdio.h>
+it contains function prototype of printf and scanf functions
+what is a function prototype
+it contains function name right name of parameters and right type of parameters
+main () is a function
+printf is a standard library function use to print a string on the console/terminal/screen/std ou
