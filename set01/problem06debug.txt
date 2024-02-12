@@ -1,0 +1,64 @@
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets> git add . 
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets> git commit -m "test"
+[main 7fa6de0] test
+ 4 files changed, 62 insertions(+)
+ create mode 100644 set01/problem06debug.txt
+ create mode 100644 set01/problem06error.txt
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets> git push .
+Everything up-to-date
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets> cd set01
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01> gcc problem05.c -O0 -g
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01\a.exe...done.
+(gdb) l
+1       #include <stdio.h>
+2
+3       int input();
+4       int compare(int a,int b,int c);
+5       void output(int a,int b,int c,int largest);
+6
+7       int main() {
+8           int num1,num2,num3,largest;
+9           num1 = input();
+10          num2 = input();
+(gdb) l
+11          num3 = input();
+12          largest = compare(num1,num2,num3);
+13          output(num1,num2,num3,largest);
+14          return 0;
+15      }
+16      int input() {
+17          int num;
+18          printf("Enter a number: ");
+19          scanf("%d",&num);
+20          return num;
+(gdb) l
+21      }
+22      int compare(int a,int b,int c) {
+23          int largest = (a>b)?((a>c)?a:c):((b>c)?b:c);
+24          return largest;
+25      }
+26      void output(int a,int b,int c,int largest) {
+27          printf("Among %d, %d,and %d,the largest number is %d\n",a,b,c,largest);
+28      }(gdb) l
+Line number 29 out of range; problem05.c has 28 lines.
+(gdb) r
+Starting program: C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01/a.exe       
+[New Thread 3276.0x290c]
+[New Thread 3276.0x5f28]
+Enter a number: 67
+Enter a number: 87
+Enter a number: 98
+Among 67, 87,and 98,the largest number is 98
+[Inferior 1 (process 3276) exited normally]
+(gdb) q
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01>
