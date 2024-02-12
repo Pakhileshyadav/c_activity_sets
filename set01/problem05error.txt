@@ -1,0 +1,8 @@
+cd : Cannot find path 'C:\Users\P AKHILESH 
+YADAV\Documents\GitHub\c_activity_sets\problem05.c' because it does not exist.
+At line:1 char:1
++ cd problem05.c
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\P AKHI...ets\problem05.c:String) [Set  
+   -Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand    
