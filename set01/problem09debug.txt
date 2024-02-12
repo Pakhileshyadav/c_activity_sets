@@ -1,0 +1,58 @@
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01\a.exe...done.
+(gdb) l
+1       #include <stdio.h>
+2       float input();
+3       float square_root(float n);
+4       void output(float n, float sqrroot);
+5
+6       int main()
+7       {
+8           float n=input();
+9           float sqrroot=square_root(n);
+10          output(n,sqrroot);
+(gdb) l 
+11          return 0;
+12      }
+13
+14
+15      float input()
+16      {
+17          float n;
+18          printf("Enter a number: ");
+19          scanf("%f", &n);
+20          return n;
+(gdb) l
+21      }
+22      float square_root(float n)
+23      {
+24          float x = n;
+25          float y = 1;
+26          float epsilon = 0.000001;
+27          while (x - y > epsilon) {
+28              x = (x + y) / 2;
+29              y = n / x;
+30          }
+(gdb) l
+31          return x;
+32      }
+33
+34      void output(float n,float sqrroot){
+35          printf("The square root of %f is %f\n", n,sqrroot);
+36      }(gdb) r
+Starting program: C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01/a.exe       
+[New Thread 13328.0x624c]
+[New Thread 13328.0x5d10]
+Enter a number: 56
+The square root of 56.000000 is 7.483315
+[Inferior 1 (process 13328) exited normally]
+(gdb) q
