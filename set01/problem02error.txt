@@ -1,0 +1,1 @@
+\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01> gcc -g -O0 problem02.c
