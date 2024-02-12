@@ -1,0 +1,75 @@
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01\a.exe...done.
+(gdb) l
+1       #include <stdio.h>
+2       int input_array_size();
+3       void input_array(int n, int a[n]);
+4       int sum_n_array(int n, int a[n]);
+5       void output(int n, int a[n], int sum);
+6
+7       int main() {
+8           int n, sum;
+9           n = input_array_size();
+10          int a[n];
+(gdb) l
+11          input_array(n, a);
+12          sum = sum_n_array(n, a);
+13          output(n, a, sum);
+14          return 0;
+15      }
+16      int input_array_size() {
+17          int n;
+18          printf("Enter the number of elements (n): ");
+19          scanf("%d", &n);
+20          return n;
+(gdb) l
+21      }
+22      void input_array(int n, int a[n]) {
+23          printf("Enter %d different numbers:\n", n);
+24          for (int i = 0; i < n; ++i) {
+25              printf("Element %d: ", i + 1);
+26              scanf("%d", &a[i]);
+27          }
+28      }
+29      int sum_n_array(int n, int a[n]) {
+30          int sum = 0;
+(gdb) l
+31          for (int i = 0; i < n; ++i) {
+32              sum += a[i];
+33          }
+34          return sum;
+35      }
+36      void output(int n, int a[n], int sum) {
+37          printf("You entered the following array:\n");
+38          for (int i = 0; i < n; ++i) {
+39              printf("%d ", a[i]);
+40          }
+(gdb) l
+41          printf("\nSum of the array elements: %d\n", sum);
+42      }(gdb) l
+Line number 43 out of range; problem08.c has 42 lines.
+(gdb) l
+Line number 43 out of range; problem08.c has 42 lines.
+(gdb) r
+Starting program: C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01/a.exe       
+[New Thread 15412.0x65c8]
+[New Thread 15412.0x5820]
+Enter the number of elements (n): 2
+Enter 2 different numbers:
+Element 1: 65
+Element 2: 67
+You entered the following array:
+65 67
+Sum of the array elements: 132
+[Inferior 1 (process 15412) exited normally]
+(gdb) q
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01>
