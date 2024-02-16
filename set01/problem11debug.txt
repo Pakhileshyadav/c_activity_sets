@@ -1,0 +1,58 @@
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01\a.exe...done.
+(gdb) l
+4           float imaginary;
+5       };
+6       typedef struct _complex Complex;
+7       Complex input_complex();
+8       Complex add_complex(Complex a, Complex b);
+9       void output(Complex a, Complex b, Complex sum);
+10
+11      int main() {
+12          Complex complex1, complex2, sum;
+13          complex1 = input_complex();
+(gdb) l
+14          complex2 = input_complex();
+15          sum = add_complex(complex1, complex2);
+16          output(complex1, complex2, sum);
+17          return 0;
+18      }
+19      Complex input_complex() {
+20          Complex c;
+21          printf("Enter the real part: ");
+22          scanf("%f", &c.real);
+23          printf("Enter the imaginary part: ");
+(gdb) l
+24          scanf("%f", &c.imaginary);
+25          return c;
+26      }
+27      Complex add_complex(Complex a, Complex b) {
+28          Complex result;
+29          result.real = a.real + b.real;
+30          result.imaginary = a.imaginary + b.imaginary;
+31          return result;
+32      }
+33      void output(Complex a, Complex b, Complex sum) {
+(gdb) r
+Starting program: C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01/a.exe       
+[New Thread 3480.0x3fe0]
+[New Thread 3480.0x4f10]
+Enter the real part: 45
+Enter the imaginary part: 67
+Enter the real part: 78
+Enter the imaginary part: 87
+You entered two complex numbers:
+Complex Number 1: 45.00 + 67.00i
+Complex Number 2: 78.00 + 87.00i
+Sum of the complex numbers: 123.00 + 154.00i
+[Inferior 1 (process 3480) exited normally]
+(gdb) q

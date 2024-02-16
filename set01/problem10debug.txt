@@ -1,0 +1,57 @@
+S C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01\a.exe...done.
+(gdb) l
+1       #include <stdio.h>
+2       void input_two_strings(char *string1, char *string2);
+3       int stringcompare(char *string1, char *string2);
+4       void output(char *string1, char *string2, int result);
+5
+6       int main() {
+7           char string1[100], string2[100];
+8           input_two_strings(string1, string2);
+9           int result = stringcompare(string1, string2);
+10          output(string1, string2, result);
+(gdb) l
+11          return 0;
+12      }
+13      void input_two_strings(char *string1, char *string2) {
+14          printf("Enter the first string: ");
+15          scanf("%s", string1);
+16          printf("Enter the second string: ");
+17          scanf("%s", string2);
+18      }
+19      int stringcompare(char *string1, char *string2) {
+20          while (*string1 != '\0' && *string2 != '\0') {
+(gdb) l
+21              if (*string1 != *string2) {
+22                  return *string1 - *string2;
+23              }
+24              string1++;
+25              string2++;
+26          }
+27          return *string1 - *string2;
+28      }
+29      void output(char *string1, char *string2, int result) 
+30          printf("You entered:\n");
+(gdb) r
+Starting program: C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01/a.exe       
+[New Thread 23112.0x57e8]
+[New Thread 23112.0x3cd0]
+Enter the first string: 56
+Enter the second string: 78
+You entered:
+String 1: 56
+String 2: 78
+String 1 is less than String 2.
+[Inferior 1 (process 23112) exited normally]
+(gdb) q
+PS C:\Users\P AKHILESH YADAV\Documents\GitHub\c_activity_sets\set01>
