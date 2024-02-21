@@ -11,3 +11,7 @@ int main ()
     output(str,rev_str);
     return 0;
 }
+void input_string(char *a){
+    printf("Enter a string");
+    scanf("%[^\n]s",a);
+}
