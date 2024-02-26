@@ -14,3 +14,10 @@ void input_string(char *a) {
     printf("Enter a string");
     scanf("%[^\n]s", a);
 }
+void str_reverse(char *str, char *rev_str) {
+    int len =strlen(str);
+    for (int i = 0; i < len; i++) {
+        rev_str[i] = str[len -1 - i];
+    }
+    rev_str[len] = '\0';
+}
