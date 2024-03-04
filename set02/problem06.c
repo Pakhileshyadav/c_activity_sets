@@ -28,4 +28,3 @@ int main()
     output(&original_string[0], &reverse_string[0]);
     return 0;
 }
-T
